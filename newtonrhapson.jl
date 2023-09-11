@@ -16,11 +16,9 @@ end
 
 function NR(xo, f, fp, TOL)
     k = 0
-    while abs(g(xo)) > TOL
+    while abs(g(x0)) > TOL
         err = 0
         x1 = xo - (f(xo) / fp(xo))
-        println("xo: ", xo)
-        println("x1: ", x1)
         err = abs((abs(x1) - abs(xo)) / (abs(x1)))
         xo = x1
         k = k + 1
@@ -42,3 +40,4 @@ tolu = parse(Float64, tolu)
 NR(xo, f, fp, tolu)
 
 
+       

@@ -8,7 +8,7 @@ def linear_interpolation(x, x0, x1, y0, y1):
     - y0, y1: Los valores y en los dos puntos de datos conocidos.
 
     Devuelve:
-    - valor_interpolado: El valor interpolado en x.
+    - interpolated_value: El valor interpolado en x.
     """
 
     if x0 == x1:

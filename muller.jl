@@ -1,5 +1,5 @@
-function f(t)
-    return (t^4)-(16*t^3)-(500*t^2)+8000*t-32000
+function f(w)
+    return ((w*(900-(8*sqrt(-64+900)-w^2)))/(900-w^2)) - ((8*w)/(sqrt(400-64)))
 end
 
 function q(xo,x1,x2)  
@@ -28,7 +28,7 @@ function MM(f,x2,x1,xo, TOL)
         B= b(f,Q,x2,x1,xo) 
         C= c(f,Q,x2) 
     
-        x3= x2-((x2-x1)*(2*C/max((B+sqrt((B^2)-(4*A*C))),(B-sqrt((B^2)-(4*A*C))))))
+        x3= x2-((x2-x1)*(2*C/max((B+sqrt(Complex((B^2)-(4*A*C)))),(B-sqrt(Complex((B^2)-(4*A*C)))))))
         err = abs((abs(x3) - abs(x2)) / (abs(x3)))
         xo=x1
         x1=x2
@@ -47,11 +47,11 @@ xo = parse(Float64, xo)
 
 println("Ingrese la segunda estimación (x1)")
 x1 = readline()
-x1 = parse(Float64, x1)
+x1 = parse(ComplexF64, x1)
 
 println("Ingrese la tercera estimación (x2)")
 x2 = readline()
-x2 = parse(Float64, x2)
+x2 = parse(ComplexF64, x2)
 
 println("Ingrese la tolerancia")
 tolu = readline()

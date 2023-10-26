@@ -119,7 +119,7 @@ println(b)
 x0 = zeros(Float64, length(b))
 
 tolerancia = 1e-6
-max_iteraciones = 100000
+max_iteraciones = 1000000
 
 solucion = gauss_seidel(A, b, x0, tolerancia, max_iteraciones)
 println("Solución: ", solucion)

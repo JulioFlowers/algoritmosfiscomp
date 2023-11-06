@@ -31,7 +31,7 @@ function gauss_seidel(A, b, x0, tol, max_iter)
     end
     
     println("El método de Gauss-Seidel no convergió en $max_iter iteraciones.")
-    return 
+    return x
 end
 
 
@@ -64,7 +64,6 @@ function matrixBuilder()
             gcoef = [-1.0, 16.0, alp, 16.0, -1.0]
             aux= vcat(zeros(Float64,(i-4)), gcoef)
             local icc = vec(vcat(aux, zeros(Float64,((n-3)-(i+1)))))'
-            println(icc)
             M=vcat(M,icc)
         end
 
@@ -133,7 +132,6 @@ y1= yf[1]+h
 A= matrixBuilder()
 
 b = rvecBuilder()
-println(b)
 
 x0 = zeros(Float64, length(b))
 
@@ -141,12 +139,11 @@ tolerancia = 1e-6
 max_iteraciones = 1000000
 
 solucion = gauss_seidel(A, b, x0, tolerancia, max_iteraciones)
+
 println("Solución: ", solucion)
 
 xs= range(yf[1], yf[2], step=h)
-println(length(xs))
 
 system = vcat(uyf[1:2],solucion,uyf[3:4])
-println(system)
-println(length(system))
+
 plot(xs, system)

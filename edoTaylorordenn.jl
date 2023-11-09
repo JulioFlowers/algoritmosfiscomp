@@ -15,7 +15,7 @@ function W(n,ti, wi, h, f)
             sum = f(ti,wi)
         end
 
-        sum = ((h^(i-1))/(factorial(i)))*ForwardDiff.derivative(f(t, wi), ti, n-1)
+        sum = ((h^(i-1))/(factorial(i)))*ForwardDiff.derivative(f(ti, wi), ti, n-1)
     end
 
     return wi + h*sum
@@ -37,7 +37,7 @@ println("Ingrese y(a)")
 w0 = readline()
 w0 = parse(Float64, w0)
 
-xs = inv[1]:h:inv[end]
+xs::Real = inv[1]:h:inv[end]
 
 function yHandler(j,n,ti,wo,h, f)
 

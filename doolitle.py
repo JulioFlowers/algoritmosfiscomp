@@ -30,9 +30,10 @@ def doolittle_lu_decomposition(A):
 # Example usage:
 if __name__ == "__main__":
     # Define the square matrix A
-    A = np.array([[2, -1, 1],
-                  [-1, 3, 2],
-                  [1, 2, 4]], dtype=float)
+    A = np.array([[1, 2, -1, 1],
+                  [2, 3, -4,  3],
+                  [-1, -4, -1,  3],
+                  [1, 3, 3,  0]], dtype=float)
 
     L, U = doolittle_lu_decomposition(A)
     print("Matrix A:")

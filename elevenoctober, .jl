@@ -61,7 +61,7 @@ u, v, y, x = heun_method(f, u0, v0, y0, x0,k, h, N)
 
 plot(x, label=L"x(t)", title = "Sistmea K = $(k)", legend=:outerbottom)
 savefig("xvst$(Int(k*10)).png" )
-plot(x, label=L"\theta(t)", title = "Sistmea K = $(k)", legend=:outerbottom)
+plot(y, label=L"\theta(t)", title = "Sistmea K = $(k)", legend=:outerbottom)
 savefig("thetavst$(Int(k*10)).png" )
 
 p2= plot(y,x, title = "Sistmea K = $(k)", label=L"$x(t)\ vs\ \ \theta(t)$", legend=:outerbottom)
@@ -75,7 +75,7 @@ u, v, y, x = heun_method(f, u0, v0, y0, x0,k, h, N)
 
 plot(x, label=L"x(t)", title = "Sistmea K = $(k)", legend=:outerbottom)
 savefig("xvst$(Int(k*10)).png" )
-plot(x, label=L"\theta(t)", title = "Sistmea K = $(k)", legend=:outerbottom)
+plot(y, label=L"\theta(t)", title = "Sistmea K = $(k)", legend=:outerbottom)
 savefig("thetavst$(Int(k*10)).png" )
 
 plot(y,x, title = "Sistmea K = $(k)", label=L"$x(t)\ vs\ \ \theta(t)$", legend=:outerbottom)
@@ -90,7 +90,7 @@ u, v, y, x = heun_method(f, u0, v0, y0, x0,k, h, N)
 
 plot(x, label=L"x(t)", title = "Sistmea K = $(k)", legend=:outerbottom)
 savefig("xvst$(Int(k*10)).png" )
-plot(x, label=L"\theta(t)", title = "Sistmea K = $(k)", legend=:outerbottom)
+plot(y, label=L"\theta(t)", title = "Sistmea K = $(k)", legend=:outerbottom)
 savefig("thetavst$(Int(k*10)).png" )
 
 plot(y,x, title = "Sistmea K = $(k)", label=L"$x(t)\ vs\ \ \theta(t)$", legend=:outerbottom)

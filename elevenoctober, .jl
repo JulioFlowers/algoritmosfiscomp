@@ -1,6 +1,8 @@
 using LaTeXStrings
 using Plots
 
+#=esta funcion calcula los predictores y el siguiente paso par las
+ecuaciones del sistema =#
 function heun_method(f, u0, v0, y0, x0,k, h, N)
     u = zeros(N+1)
     v = zeros(N+1)
@@ -33,6 +35,7 @@ function heun_method(f, u0, v0, y0, x0,k, h, N)
     return u, v, y, x
 end
 
+#sistema de edos
 function f(t, u, v, y, x, k, h)
     dx = h * u
     dv = h * ((-2u .* v .- sin.(y)) ./ (x .+ 1))
